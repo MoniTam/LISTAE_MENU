@@ -11,4 +11,19 @@ package listae_menu;
  */
 public class M_NODO {
     
+        
+    public int dato;    // Valor a almacenar    
+    public M_NODO siguiente;  // Puntero, del mismo tipo de la clase
+    
+    // Constructor para insertar el dato
+    public M_NODO (int d){
+        this.dato = d;
+        this.siguiente = null;
+      
+    }
+    // Constructor para insertar al inicio de la lista
+    public M_NODO(int d, M_NODO n){
+        dato = d;       
+        siguiente = n;
+    }
 }
