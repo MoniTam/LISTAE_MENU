@@ -21,10 +21,11 @@ public class PRINCIPAL {
         
         M_LISTA listaenlazada = new M_LISTA();
         int opcion = 0; 
-        Integer DatoB,DatoI;
+        Integer DatoI;
         
         Scanner Teclado = new Scanner(System.in);
         do{
+            System.out.println ("\n MENU DE FUNCIONES");
             System.out.println ("1) Añadir valor al pincipio");
             System.out.println ("2) Borrar valor al principio");
             System.out.println ("3) Añadir valor al final");
@@ -36,7 +37,7 @@ public class PRINCIPAL {
             switch (opcion) {
                 case 1:
                    System.out.println ("1) Ingresar el dato");
-                   DatoI = new Integer(Teclado.nextInt());
+                   DatoI = Teclado.nextInt();
                    listaenlazada.agregarAlInicio(DatoI);
                    break;
                 case 2:
@@ -44,7 +45,7 @@ public class PRINCIPAL {
                     break;
                 case 3:
                    System.out.println ("1) Ingresar el dato");
-                   DatoI = new Integer(Teclado.nextInt());
+                   DatoI = Teclado.nextInt();
                    listaenlazada.agregarAlFinal(DatoI);
                    break;
                 case 4:
