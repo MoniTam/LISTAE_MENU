@@ -9,8 +9,8 @@ package listae_menu;
  *
  * @author ESTEFANIA TAMAY
  */
-public class M_LISTA {
-        protected M_NODO inicio, fin;   // Punteros para donde esta el inicio y el fin
+    public class M_LISTA {
+        protected M_NODO inicio, fin;   
         
         public M_LISTA(){
         inicio = null;
@@ -20,31 +20,38 @@ public class M_LISTA {
     public boolean esVacia(){
         if (inicio == null){
             return true;
-        }else{
-            return false;
+            }else{
+                return false;
         }
     } 
-    public void agregarAlInicio(int elemento){
-        inicio = new M_NODO(elemento, inicio);
-        if (fin == null){
+     // Método para insertar al Inicio de la Lista
+    public void agregarAlInicio(int d){
+        
+        if(esVacia()){
+        inicio = new M_NODO(d, inicio);
             fin = inicio;
-       } 
+            } else {
+                inicio = new M_NODO(d, inicio);
     }
-    public void agregarAlFinal(int elemento){
-        if (!esVacia()){
-            fin.siguiente = new M_NODO(elemento);
-            fin = fin.siguiente;
-        }else{
-            inicio=fin= new M_NODO(elemento);
+ }
+    // Método para insertar al Final de la Lista
+    public void agregarAlFinal(int d){
+        if (esVacia()){
+            inicio = new M_NODO(d);
+            fin = inicio;
+            }else{
+                fin.setSiguiente(new M_NODO(d));
+                fin = fin.getSiguiente();
         }
             
     }     
     public void mostrarLista(){
         M_NODO recorrer = inicio;
         System.out.println("");
+        
         while (recorrer != null){
             System.out.print("["+ recorrer.dato+"] -->");
-            recorrer = recorrer.siguiente;
+            recorrer = recorrer.getSiguiente();
         }
     }
 
@@ -54,25 +61,25 @@ public class M_LISTA {
         if (inicio == fin){
             inicio = null;
             fin    = null;
-        } else {
-            inicio = inicio.siguiente;
+             }else{
+                inicio = inicio.siguiente;
         }
-           return elemento;
+                return elemento;
         }
-     public int borrarDelFinal(){
+     // Método para eliminar un nodo del final
+    public int borrarDelFinal(){
         int elemento = fin.dato;
         if (inicio == fin){
             inicio = null;
             fin    = null;
-        } else {
+            } else {
             M_NODO temporal = inicio;
-            // Encontrar el final de la Lista
-            while(temporal.siguiente !=fin){
+                while(temporal.siguiente !=fin){
                 temporal = temporal.siguiente;
             }
-            fin = temporal;
-            fin.siguiente = null;
+                fin = temporal;
+                fin.siguiente = null;
         }
-        return elemento;
+                return elemento;
     }
     }
