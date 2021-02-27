@@ -26,4 +26,21 @@ public class M_NODO {
         dato = d;       
         siguiente = n;
     }
+
+    public int getDato() {
+        return dato;
+    }
+
+    public void setDato(int d) {
+        this.dato = d;
+    }
+
+    public M_NODO getSiguiente() {
+        return siguiente;
+    }
+
+    public void setSiguiente(M_NODO siguiente) {
+        this.siguiente = siguiente;
+    }
+    
 }
