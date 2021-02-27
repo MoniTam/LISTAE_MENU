@@ -25,8 +25,7 @@ package listae_menu;
         }
     } 
      // Método para insertar al Inicio de la Lista
-    public void agregarAlInicio(int d){
-        
+    public void agregarAlInicio(int d){       
         if(esVacia()){
         inicio = new M_NODO(d, inicio);
             fin = inicio;
@@ -35,8 +34,7 @@ package listae_menu;
     }
  }
     // Método para insertar al Final de la Lista
-    public void agregarAlFinal(int d){
-        
+    public void agregarAlFinal(int d){        
         if (esVacia()){
             inicio = new M_NODO(d);
             fin = inicio;
@@ -46,8 +44,7 @@ package listae_menu;
         }
             
     }     
-    public void mostrarLista(){
-        
+    public void mostrarLista(){       
         M_NODO recorrer = inicio;
         System.out.println("");
         
@@ -58,8 +55,7 @@ package listae_menu;
     }
 
       // Metodo para eliminar un nodo del inicio
-    public int borrarDelInicio(){
-        
+    public int borrarDelInicio(){        
         int elemento = inicio.dato;
         if (inicio == fin){
             inicio = null;
@@ -70,8 +66,7 @@ package listae_menu;
                 return elemento;
         }
      // Método para eliminar un nodo del final
-    public int borrarDelFinal(){
-        
+    public int borrarDelFinal(){        
         int elemento = fin.dato;
         if (inicio == fin){
             inicio = null;
